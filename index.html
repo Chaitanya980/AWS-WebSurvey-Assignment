@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS Department Survey</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="survey.css">
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <link rel="javascript" href="./bootstrap.min.js">
+</head>
+<body>  
+    <header class="header p-4">
+        <div class="container-fluid d-flex flex-row justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+                <img src="images/gmu_logo.jpg" alt="CS department logo">
+                <span class="hello-text ms-2"> GEORGE MASON UNIVERSITY</span>
+            </div>
+            <nav class="nav-bar">
+                 <a href="folio.html">Home</a> 
+            </nav>
+        </div>
+    </header>
+    <main class="container mt-4">
+        <h1 class="text-center">Student Survey Form </h1>
+        <form autocomplete="on" class="p-4 border rounded bg-light shadow">
+            <!-- Fields For First Name, Last Name, Street Address, City, State , Zip Code  -->
+            <div class="form-group">
+                <p class="pt-2 pb-2">(Required fields are indicated by a <span class="star">*</span> mark )</p>
+                <label for="first-name">First Name *</label>
+                <input type="text" id="first-name" name="first-name" class="form-control" required autofocus>
+            </div>
+            <div class="form-group">
+                <label for="last-name">Last Name *</label>
+                <input type="text" id="last-name" name="last-name" class="form-control" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="address">Street Address *</label>
+                <input type="text" id="address" name="address" class="form-control" required>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="city">City *</label>
+                    <input type="text" id="city" name="city" class="form-control" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="state">State *</label>
+                    <input type="text" id="state" name="state" class="form-control" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="zip">Zip Code *</label>
+                    <input type="text" id="zip" name="zip" class="form-control" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="phone">Telephone *</label>
+                <input type="tel" id="phone" name="phone" class="form-control" placeholder="+1 123-456-7890" required>
+            </div>
+            <div class="form-group"></div>
+                <label for="raffle">Raffle</label>
+                <input type="text" id="raffle" name="raffle" class="form-control" placeholder="Enter at least 10 comma-separated numbers (1-100)" >
+            </div>
+            <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="example@gmu.edu" required>
+            </div>
+            <div class="form-group">
+                <label for="url">Personal Website</label>
+                <input type="url" id="url" name="url" class="form-control" placeholder="https://example.com">
+            </div>
+            <div class="form-group">
+                <label for="survey-date">Date of Survey *</label>
+                <input type="date" id="survey-date" name="survey-date" class="form-control" required>
+            </div>
+            <fieldset class="form-group">
+                <legend>What did you like most about the campus?</legend>
+                <div class="form-check">
+                    <input type="checkbox" id="students" class="form-check-input">
+                    <label for="students" class="form-check-label">Students</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" id="location" class="form-check-input">
+                    <label for="location" class="form-check-label">Location</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" id="campus" class="form-check-input">
+                    <label for="campus" class="form-check-label">Campus</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" id="atmosphere" class="form-check-input">
+                    <label for="atmosphere" class="form-check-label">Atmosphere</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" id="dorms" class="form-check-input">
+                    <label for="dorms" class="form-check-label">Dorm Rooms</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" id="sports" class="form-check-input">
+                    <label for="sports" class="form-check-label">Sports</label>
+                </div>
+            </fieldset>
+            
+            <fieldset class="form-group">
+                <legend>How did you become interested in the university?</legend>
+                <div class="form-check">
+                    <input type="radio" id="friends" name="interest" class="form-check-input">
+                    <label for="friends" class="form-check-label">Friends</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" id="television" name="interest" class="form-check-input">
+                    <label for="television" class="form-check-label">Television</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" id="internet" name="interest" class="form-check-input">
+                    <label for="internet" class="form-check-label">Internet</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" id="other" name="interest" class="form-check-input" onclick="toggleOtherInput(true)">
+                    <label for="other" class="form-check-label">Other</label>
+                </div>
+                <div id="other-input" style="display: none; margin-top: 10px;">
+                    <input type="text" id="other-text" class="form-control" placeholder="Please specify">
+                </div>
+            </fieldset>
+            <script>
+                function toggleOtherInput(show) {
+                    document.getElementById("other-input").style.display = show ? "block" : "none";
+                }
+            </script>
+            
+            <div class="form-group">
+                <label for="comments">Additional Comments </label>
+                <textarea id="comments" name="comments" class="form-control" rows="4" placeholder="Enter Comments here"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="recommendation">Likelihood of Recommending George Mason *</label>
+                <select id="recommendation" name="recommendation" class="form-control" required>
+                    <option value="Very Likely">Very Likely</option>
+                    <option value="Likely">Likely</option>
+                    <option value="Unlikely">Unlikely</option>
+                </select>
+            </div>
+            <!-- Buttons for Submit and Cancel -->
+            <div class="form-group text-center">
+                <button type="submit" class="btn btn-success">Submit Survey</button>
+                <button type="reset" class="btn btn-danger">Cancel</button>
+            </div>
+        </form>
+    </main>
+    <footer class="footer mt-4 bg-green text-white text-center p-3">
+        <span>&copy; Chaitanya Chaudhari | 2025</span>
+    </footer>
+</body>
+</html>

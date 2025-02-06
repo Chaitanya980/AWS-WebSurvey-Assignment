@@ -1,0 +1,107 @@
+/* Set background color for the whole page */
+body {
+    background-color: lightgray; 
+    font-family: Arial, sans-serif;
+}
+
+/* Styling for h1 elements */
+h1 {
+    color: #016d37; 
+    text-align: center;
+    padding: 20px;
+    border: 5px solid #006633; 
+    box-shadow: 0px 8px 50px rgba(0, 0, 0, 0.3);
+}
+
+/* Custom class for GMU-themed elements */
+.gmu-highlight {
+    background-color: #FFCC33; 
+    color: #006633; 
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Header styling */
+.header {
+    background-color: #006633 !important;
+    border-bottom: 4px solid #FFCC33;
+    padding: 10px 10px 100px;
+    
+}
+.header img {
+    height: 50px;
+}
+
+.nav-bar a {
+    color: white !important;
+    font-weight: bold;
+    padding: 5px;
+    text-decoration: none;
+    margin-right: 15px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.nav-bar a:hover {
+    color: #FFCC33 !important;
+}
+
+/* Styling for the section container */
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Form styling */
+form {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+input, select, textarea {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 8px;
+    width: 100%;
+}
+
+button {
+    background-color: #016d37;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #014d29;
+}
+
+/* Footer styling */
+.footer {
+    background-color: #006633 !important;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    margin-top: 20px;
+    border-top: 3px solid #FFCC33;
+}
+
+.hello-text {
+    color: gold;
+    font-weight: bold;
+    font-size: 26px; 
+    text-transform: uppercase;
+    white-space: nowrap;
+    display: inline-block;
+}
